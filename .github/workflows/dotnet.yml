@@ -4,10 +4,10 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches: 
-      - main
+      - master
 
 jobs:
     build:
@@ -17,6 +17,6 @@ jobs:
         - name: Azure Pipelines Action
           uses: Azure/pipelines@v1
           with:
-            azure-devops-project-url: https://dev.azure.com/RajatRath/DevOps-Learning/
+            azure-devops-project-url: https://dev.azure.com/RajatRath/DevOps-Learning
             azure-pipeline-name: 'WebApplicationMVC'
             azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
